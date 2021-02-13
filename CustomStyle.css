@@ -1,0 +1,163 @@
+/* This is a stylesheet. */
+body {
+	padding: 10px 20px 20px 20px;
+	font-family: "Segoe UI", "Arial", sans-serif;
+	margin: auto;
+	max-width: 1280px;
+}
+
+section {
+	padding: 10px 8%;
+	margin: 25px 0px;
+}
+
+article {
+	margin: 20px 0px;
+}
+
+img.img-about {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+}
+
+img.img-header {
+	display: block;
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-bottom: 10px;
+	width: 50%;
+	height: auto;
+}
+
+.image-viewer-16x9 {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	background: black;
+}
+
+.image-aspect-ratio-container {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: auto;
+	height: 100%;
+}
+
+row.row-spacer {
+	padding: 25px 0px;
+	margin: 25px 0px;
+}
+
+h1 {
+	text-align: center;
+}
+
+div.no-padding {
+	padding:0;
+}
+
+/* Container holding the image and the text */
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+	width: auto;
+}
+
+/* Centered text */
+.gradient-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+}
+
+/* Buttons */
+
+/* Button-Header */
+.btn-header {
+	color: #ffffff;
+	background-color: #373737;
+	border-color: #373737; /*set the color you want here*/
+	border-radius: 0 !important;
+}
+
+.btn-header:hover, .btn-header:focus, .btn-header:active, .btn-header.active, .open > .dropdown-toggle.btn-header {
+	color: #ffffff;
+	background-color: #121212;
+	border-color: #121212; /*set the color you want here*/
+}
+
+/* Button-Header-Current */
+.btn-header-current {
+	color: #ffffff;
+	background-color: #ff0031;
+	border-color: #ff0031; /*set the color you want here*/
+	border-radius: 0 !important;
+	font-weight: bold;
+}
+
+.btn-header-current:hover, .btn-header-current:focus, .btn-header-current:active, .btn-header-current.active, .open > .dropdown-toggle.btn-header-current {
+	color: #ffffff;
+	background-color: #121212;
+	border-color: #121212; /*set the color you want here*/
+}
+
+.custom-video {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	
+}
+
+.custom-video::-webkit-media-controls-volume-slider {
+	display: none;
+}
+
+.custom-video::-webkit-media-controls-mute-button {
+	display: none;
+}
+
+.carousel-indicators {
+	top: 0px;
+	bottom: 95%;
+}
+
+.carousel-control-prev {
+	top: 20%;
+	bottom: 20%;
+}
+
+.carousel-control-next {
+	top: 20%;
+	bottom: 20%;
+}
+
+p {
+	text-indent: 2em;
+	font-size: 14pt;
+}
+
+.carousel-control-prev-icon {
+	border-radius: 100%;
+	background-color: #000000;
+	width: 23.375%;
+	height: 11%;
+	background-size: 50%;
+}
+
+.carousel-control-next-icon {
+	border-radius: 100%;
+	background-color: #000000;
+	width: 23.375%;
+	height: 11%;
+	background-size: 50%;
+}

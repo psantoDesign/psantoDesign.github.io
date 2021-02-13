@@ -1,0 +1,30 @@
+# Ignore all types of files
+*
+
+# Except...
+
+# Code
+!*.html
+!*.css
+!*.js
+
+# Images
+!*.jpg
+!*.gif
+!*.bmp
+!*.tiff
+!*.png
+!*.webp
+!*.ico
+
+# Videos
+!*.mp4
+
+# Directories
+!*/
+
+# The gitignore file (important)
+!.gitignore
+
+# But also include...
+/.git

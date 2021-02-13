@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PaulSantoroWebsite">
+	<head>
+		<title>Santoro Design</title>
+		<link rel="icon" href="Resources/logo_raw.ico" type='image/x-icon' />
+	</head>
+	<body ng-controller="index-controller">
+		<!-- Scripts -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<!-- Underscore.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.11.0/underscore-min.js"></script>
+		<!-- Custom Stylesheet.  Edit this file to set the custom style. -->
+		<link rel="stylesheet" href="CustomStyle.css">
+		<!--App config-->
+		<script src="ng-app-init.js"></script>
+		<!-- Custom Script.  Edit this file to change the behavior of this webpage. -->
+		<script src="index-controller.js"></script>
+
+		<!--Page header-->
+		<a href="index.html">
+			<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
+		</a>
+
+		<!--Buttons at the top of the page.-->
+		<div class="row row-spacer">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<div class="row">
+					<div class="col-4 no-padding">
+						<button class="btn btn-header-current btn-block">Projects</button>
+					</div>
+					<div class="col-4 no-padding">
+						<a href="what_i_use.html" class="btn btn-header btn-block">What I Use</a>
+					</div>
+					<div class="col-4 no-padding">
+						<a href="about_me.html" class="btn btn-header btn-block">About</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-2"></div>
+		</div>
+
+		<!--Home Page Only-->
+		<section>
+			<!-- Project list -->
+			<div class="row" ng-repeat="projectRow in userView.projectRows">
+				<div ng-repeat="project in projectRow" ng-class="project.columnType">
+					<a ng-href="{{project.project.page}}">
+						<div class="container">
+							<img class="img-fluid" ng-src="{{project.project.imageSource}}" ng-alt="{{project.project.imageAltText}}">
+							<div class="gradient-overlay" style="background:linear-gradient(#00000000, #00000000 75%, #000000FF 100%)"></div>
+						</div>
+						<h2 class="text-center">{{project.project.title}}</h2>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!--Page footer-->
+		<footer class="text-center">&#169; 2021 Paul Santoro.  All rights reserved.</footer>
+	</body>
+</html>
