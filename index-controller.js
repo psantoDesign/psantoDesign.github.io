@@ -24,11 +24,17 @@ PaulSantoroWebsite.controller("index-controller",
 				imageAltText: "Happy Bot Animation",
 				imageSource: "Resources/robot_animation_thumbnail.png",
 				page: "Projects/robot.html"
+			},
+			{
+				title: "Stone Arch Asset",
+				imageAltText: "Stone Arch Asset",
+				imageSource: "Resources/StoneArchImgs/StoneArch3DAssetThumbnail.png",
+				page: "Projects/arch.html"
 			}
 		];
 		
-		// Sort by title for now.
-		$scope.projects = _.sortBy($scope.projects, function (elem) { return elem.title });
+		// Reverse so that the newest element appears first.
+		$scope.projects.reverse();
 		
 		// Thresholds for project column reorganization.
 		$scope.oneColumnMaxWidth = 600;

@@ -1,16 +1,18 @@
-PaulSantoroWebsite.controller("illustration-controller", 
+PaulSantoroWebsite.controller("material-creation-gallery-controller", 
 	["$scope", 
-	function IllustrationController($scope) {
+	function MaterialCreationGalleryController($scope) {
 
 		// Initializes the page.
 		function initialize() {
 
 			// Enter the images in the order you want to view them.
 			let workflowImages = [
-				"../Resources/photoshop_alien_illustration_img.png",
-				"../Resources/photoshop_robot_illustration_img.png",
-				"../Resources/photoshop_planet_illustration_img.png",
-				"../Resources/illustrator_trophy_illustration_img.png"
+				"../Resources/MaterialCreationImgs/materialcreation_tiles_img.png",
+				"../Resources/MaterialCreationImgs/materialcreation_stone_arch_img.png",
+				"../Resources/MaterialCreationImgs/materialcreation_rusty_metal_img.png",
+				"../Resources/MaterialCreationImgs/materialcreation_stylized_pillar_img.png",
+				"../Resources/MaterialCreationImgs/materialcreation_retro_textures_img.png",
+				"../Resources/MaterialCreationImgs/materialcreation_concrete_img.png"
 			];
 
 			// Make it so that the images can be viewed.  Don't modify this part of the code.

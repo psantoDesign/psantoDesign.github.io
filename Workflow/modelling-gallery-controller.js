@@ -1,18 +1,19 @@
-PaulSantoroWebsite.controller("blender-controller", 
+PaulSantoroWebsite.controller("modelling-gallery-controller", 
 	["$scope", 
-	function BlenderController($scope) {
+	function ModellingGalleryController($scope) {
 
 		// Initializes the page.
 		function initialize() {
 
 			// Enter the images in the order you want to view them.
 			let workflowImages = [
-				"../Resources/blender_scene_img.png",
-				"../Resources/blender_animation_img.png",
-				"../Resources/blender_mat_img.png",
-				"../Resources/blender_modeling_img1.png",
-				"../Resources/blender_modeling_img2.png",
-				"../Resources/blender_modeling_img3.png"
+				"../Resources/3DModelingImgs/3dmodeling_hpmodeling_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_mat_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_retopo_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_scene_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_sculpting_img.png",
+				"../Resources/3DModelingImgs/3dmodeling_modeling_img.png"
 			];
 
 			// Make it so that the images can be viewed.  Don't modify this part of the code.

@@ -1,16 +1,17 @@
-PaulSantoroWebsite.controller("photoshop-illustrator-controller", 
+PaulSantoroWebsite.controller("illustration-gallery-controller", 
 	["$scope", 
-	function PhotoshopIllustratorController($scope) {
+	function IllustrationGalleryController($scope) {
 
 		// Initializes the page.
 		function initialize() {
 
 			// Enter the images in the order you want to view them.
 			let workflowImages = [
-				"../Resources/illustrator_sunset_wallpaper_img.png",
-				"../Resources/photoshop_cube_wallpaper_img.png",
-				"../Resources/photoshop_retro_textures_img.png",
-				"../Resources/illustrator_logo_img.png"
+				"../Resources/IllustrationImgs/illustration_concept_alien_img.png",
+				"../Resources/IllustrationImgs/illustration_concept_robot.png",
+				"../Resources/IllustrationImgs/illustration_wallpaper_img.png",
+				"../Resources/IllustrationImgs/illustration_concept_planet_img.png",
+				"../Resources/IllustrationImgs/illustration_trophy_img.png"
 			];
 
 			// Make it so that the images can be viewed.  Don't modify this part of the code.

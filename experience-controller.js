@@ -1,6 +1,6 @@
-PaulSantoroWebsite.controller("about-controller", 
+PaulSantoroWebsite.controller("experience-controller", 
 	["$scope", 
-	function AboutController($scope) {
+	function ExperienceController($scope) {
 
 		// Initializes the page.
 		function initialize() {

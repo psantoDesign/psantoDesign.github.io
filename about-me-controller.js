@@ -1,6 +1,6 @@
-PaulSantoroWebsite.controller("workflow-controller", 
+PaulSantoroWebsite.controller("about-me-controller", 
 	["$scope", 
-	function WorkflowController($scope) {
+	function AboutMeController($scope) {
 
 		// Initializes the page.
 		function initialize() {
