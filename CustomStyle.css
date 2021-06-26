@@ -1,14 +1,13 @@
 /* This is a stylesheet. */
 body {
-	padding: 10px 20px 20px 20px;
+	padding: 10px 20px 0px 20px;
 	font-family: "Segoe UI", "Arial", sans-serif;
 	margin: auto;
-	max-width: 1280px;
 }
 
 section {
-	padding: 10px 8%;
-	margin: 25px 0px;
+	padding: 10px 8% 0px 8%;
+	margin: 25px 0px 0px 0px;
 }
 
 article {
@@ -25,10 +24,9 @@ img.img-about {
 
 img.img-header {
 	display: block;
-	margin-left: auto; 
-	margin-right: auto; 
+	margin-left: 0;
 	margin-bottom: 10px;
-	width: 50%;
+	width: 60%;
 	height: auto;
 }
 
@@ -71,6 +69,13 @@ div.no-padding {
 	width: auto;
 }
 
+.container-left {
+	position: relative;
+	text-align: left;
+	color: white;
+	width: auto;
+}
+
 /* Centered text */
 .gradient-overlay {
 	position: absolute;
@@ -85,15 +90,18 @@ div.no-padding {
 /* Button-Header */
 .btn-header {
 	color: #ffffff;
-	background-color: #373737;
-	border-color: #373737; /*set the color you want here*/
+	background-color: #0a0a0a;
+	border-color: #0a0a0a; /*set the color you want here*/
 	border-radius: 0 !important;
+	vertical-align: middle;
+	font-weight: bold;
 }
 
 .btn-header:hover, .btn-header:focus, .btn-header:active, .btn-header.active, .open > .dropdown-toggle.btn-header {
 	color: #ffffff;
-	background-color: #121212;
-	border-color: #121212; /*set the color you want here*/
+	background-color: #252525;
+	border-color: #252525; /*set the color you want here*/
+	font-weight: bold;
 }
 
 /* Button-Header-Current */
@@ -107,15 +115,16 @@ div.no-padding {
 
 .btn-header-current:hover, .btn-header-current:focus, .btn-header-current:active, .btn-header-current.active, .open > .dropdown-toggle.btn-header-current {
 	color: #ffffff;
-	background-color: #121212;
-	border-color: #121212; /*set the color you want here*/
+	background-color: #252525;
+	border-color: #252525; /*set the color you want here*/
 }
 
 .custom-video {
 	width: 100%;
 	height: auto;
 	max-height: 100%;
-	
+	padding: 0;
+	margin: 0;
 }
 
 .custom-video::-webkit-media-controls-volume-slider {
@@ -160,4 +169,73 @@ p {
 	width: 23.375%;
 	height: 11%;
 	background-size: 50%;
+}
+
+.project {
+	padding: 25px 0px;
+}
+
+.project-description {
+	color: #ffffff;
+}
+
+.project-images-two-column {
+	position: absolute;
+	bottom: 0;
+}
+
+.project-list {
+	background-color: #0a0a0a;
+}
+
+.project-title {
+	text-align: center;
+	color: #ffffff;
+}
+
+.page-header-two-columns {
+	padding: 0px 5%;
+}
+
+.project-overlay {
+	position: fixed; /* Sit on top of the page content */
+	display: block; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.95); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	/* cursor: pointer; Add a pointer on hover */
+}
+
+.vertical-center {
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%) translateX(8%);
+	transform: translateY(-50%) translateX(8%);
+	max-width: 84%;
+}
+
+footer {
+	padding: 20px 0px 20px 0px;
+	background-color: #0a0a0a;
+	color: #808080;
+}
+
+/* Image */
+.btn-image {
+	border-color: #0a0a0a;
+	background-color: #0a0a0a;
+	border-width: 4px;
+}
+
+.btn-image:hover, .btn-image:focus, .btn-image:active, .btn-image.active, .open > .dropdown-toggle.btn-image {
+	color: #808080;
+	background-color: #404040;
+	border-color: #404040;
+	border-width: 4px;
 }

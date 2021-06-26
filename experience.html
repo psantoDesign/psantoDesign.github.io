@@ -25,58 +25,114 @@
 		<!-- Custom Script.  Edit this file to change the behavior of this webpage. -->
 		<script src="experience-controller.js"></script>
 
-		<!--Page header-->
-		<a href="index.html">
-			<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
-		</a>
+		<!-- Project Image Carousel Overlay -->
+		<div class="project-overlay" ng-if="isImageCarouselOpen">
+			<div class="vertical-center" style="background-color: #000000">
+				<div id="carouselProjectImages" class="carousel slide" data-interval="false">
+					<ol class="carousel-indicators">
+						<li ng-repeat="image in projectImageView" data-target="#carouselProjectImages" data-slide-to="{{image.index}}" ng-class="image.carouselIndicatorClass"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div ng-repeat="image in projectImageView" ng-class="image.carouselInnerClass">
+							<div ng-if="image.isVideo">
+								<video ng-attr-id="{{image.id}}" class="custom-video" controls loop>
+									<source ng-src="{{image.src}}" type="video/mp4">
+								</video>
+							</div>
+							<div ng-if="!image.isVideo">
+								<img class="d-block w-100" ng-src="{{image.src}}" ng-alt="{{image.alt}}">
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselProjectImages" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselProjectImages" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<button type="button" class="btn btn-dark btn-block" ng-click="closeImageCarousel()">Close</button>
+			</div>
+		</div>
 
-		<!--Buttons at the top of the page.-->
-		<div class="row row-spacer">
-			<div class="col-2"></div>
-			<div class="col-8">
-				<div class="row">
-					<div class="col-4 no-padding">
-						<a href="index.html" class="btn btn-header btn-block">Projects</a>
+		<!--Buttons at the top of the page - One Column View -->
+		<section ng-if="!isTwoColumns">
+			<div class="row row-spacer">
+				<div class="col-12">
+					<!-- Logo -->
+					<div class="row">
+						<img src="Resources/santorodesign_logo_raw.png" class="img img-fluid" alt="Santoro Logo" />
 					</div>
-					<div class="col-4 no-padding">
-						<button class="btn btn-header-current btn-block">Experience</button>
-					</div>
-					<div class="col-4 no-padding">
-						<a href="about_me.html" class="btn btn-header btn-block">About</a>
+					<br />
+					<!-- Navigation -->
+					<div class="row">
+						<div class="col-4 no-padding">
+							<a href="index.html" class="btn btn-header btn-block">Projects</a>
+						</div>
+						<div class="col-4 no-padding">
+							<button class="btn btn-header-current btn-block">Experience</button>
+						</div>
+						<div class="col-4 no-padding">
+							<a href="about_me.html" class="btn btn-header btn-block">About</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-2"></div>
+		</section>
+
+		<!-- Buttons at the top of the page - Two Column View -->
+		<div class="page-header-two-columns" ng-if="isTwoColumns">
+			<div class="row row-spacer">
+				<div class="col-7">
+					<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
+				</div>
+				<div class="col-5 row">
+					<div class="col-4 no-padding" style="display: inline-flex">
+						<button ng-click="onClickNavigationButton('index.html')" class="btn btn-header btn-block">Projects</button>
+					</div>
+					<div class="col-4 no-padding" style="display: inline-flex">
+						<button class="btn btn-header-current btn-block">Experience</button>
+					</div>
+					<div class="col-4 no-padding" style="display: inline-flex">
+						<button ng-click="onClickNavigationButton('about_me.html')" class="btn btn-header btn-block">About</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!--Workflow Page Only-->
-		<section>
-			<!-- Experience Overview -->
-			<p>I&#39;ve created this section to briefly discuss what software and hardware I use, and to showcase a collection of some of the projects I have created with said software/hardware.</p>
-			<!-- 3D Modeling -->
-			<article>
-				<h1 class="text-left">3D Modeling</h1>
-				<p>
-					Blender has been my go to program for creating 3D models for the past few years. Blender has extensive functions for modeling, sculpting, texture painting, texture baking, material creation, rigging and animating, and rendering. I&#39;ve used Blender to create all sorts of assets including characters, props, and textures.
-					<br /><a href="Workflow/modelling_gallery.html">See 3D Modeling gallery.</a>
-				</p>
-			</article>
-			<!-- Material Creation -->
-			<article>
-				<h1 class="text-left">Material Creation</h1>
-				<p>
-					The main two programs I use when creating materials for 3D assets are Adobe Photoshop and Substance Painter. I use 3D meshes I create in Blender to generate normal, ambient occlusion, and curvature maps to assist in making materials. I&#39;ve created multiple textures using Photoshop and used those textures as resources when making materials in Substance Painter.
-					<br /><a href="Workflow/material_creation_gallery.html">See Material Creation gallery.</a>
-				</p>
-			</article>
-			<!-- Illustration -->
-			<article>
-				<h1 class="text-left">Illustration</h1>
-				<p>
-					I currently use Wacom drawing tablets to create illustrations in both Adobe Photoshop and Adobe Illustrator. I&#39;ve created multiple illustrations including character designs, environment designs, wallpapers, references for 3D assets and more.
-					<br /><a href="Workflow/illustration_gallery.html">See Digital Illustration gallery.</a>
-				</p>
-			</article>
+		<section class="project-list">
+			<!-- Experience Articles -->
+			<div ng-repeat="experienceItem in experience">
+				<!-- Experience Title -->
+				<h1 class="project-title">{{experienceItem.title}}</h1>
+				<!-- Experience Description -->
+				<p class="project-description">{{experienceItem.description}}</p>
+				<!-- Experience Image Thumbnails -->
+				<div class="row">
+					<div ng-repeat="image in experienceItem.firstThreeImagesInCarousel" class="col-2">
+						<div class="btn btn-image no-padding">
+							<div ng-if="image.isVideo">
+								<video class="custom-video" ng-click="onClickProjectImage(project, $index)">
+									<source ng-src="{{image.source}}" type="video/mp4">
+								</video>
+							</div>
+							<div ng-if="!image.isVideo">
+								<img class="img-fluid" ng-src="{{image.source}}" ng-alt="{{image.altText}}" ng-click="onClickExperienceImage(experienceItem, $index)">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Extend the page to fill the screen -->
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		</section>
 
 		<!--Page footer-->

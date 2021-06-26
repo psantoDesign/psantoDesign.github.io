@@ -25,45 +25,87 @@
 		<!-- Custom Script.  Edit this file to change the behavior of this webpage. -->
 		<script src="about-me-controller.js"></script>
 
-		<!--Page header-->
-		<a href="index.html">
-			<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
-		</a>
+		<!--Buttons at the top of the page - One Column View -->
+		<section ng-if="!isTwoColumns">
+			<div class="row row-spacer">
+				<div class="col-12">
+					<!-- Logo -->
+					<div class="row">
+						<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
+					</div>
+					<br />
+					<!-- Navigation -->
+					<div class="row">
+						<div class="col-4 no-padding">
+							<a href="index.html" class="btn btn-header btn-block">Projects</a>
+						</div>
+						<div class="col-4 no-padding">
+							<a href="experience.html" class="btn btn-header btn-block">Experience</a>
+						</div>
+						<div class="col-4 no-padding">
+							<button class="btn btn-header-current btn-block">About</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-		<!--Buttons at the top of the page.-->
-		<div class="row row-spacer">
-			<div class="col-2"></div>
-			<div class="col-8">
-				<div class="row">
-					<div class="col-4 no-padding">
-						<a href="index.html" class="btn btn-header btn-block">Projects</a>
+		<!-- Buttons at the top of the page - Two Column View -->
+		<div class="page-header-two-columns" ng-if="isTwoColumns">
+			<div class="row row-spacer">
+				<div class="col-7">
+					<img src="Resources/santorodesign_logo_raw.png" class="img img-header" alt="Santoro Logo" />
+				</div>
+				<div class="col-5 row">
+					<div class="col-4 no-padding" style="display: inline-flex">
+						<button ng-click="onClickNavigationButton('index.html')" class="btn btn-header btn-block">Projects</button>
 					</div>
-					<div class="col-4 no-padding">
-						<a href="experience.html" class="btn btn-header btn-block">Experience</a>
+					<div class="col-4 no-padding" style="display: inline-flex">
+						<button ng-click="onClickNavigationButton('experience.html')" class="btn btn-header btn-block">Experience</button>
 					</div>
-					<div class="col-4 no-padding">
+					<div class="col-4 no-padding" style="display: inline-flex">
 						<button class="btn btn-header-current btn-block">About</button>
 					</div>
 				</div>
 			</div>
-			<div class="col-2"></div>
 		</div>
 
 		<!--About Page Only-->
-		<section>
-			<h1>About Me</h1>
-			<!--<img class="img-about" src="Resources/mbsyz2jt-1369110814.jpg" alt="Paul" />-->
-			<article>
-				<p>
-					Ever since I can remember, I&#39;ve enjoyed illustration. In my early teen years, I was introduced to video game development, where I found my passion in both 2D and 3D digital graphics design. Since then, I&#39;ve honed my skills in art and graphics design through practice, education, and the use of various mediums and software.
-				</p>
-				<p>
-					I graduated from Clearwater High School and obtained an Associate of Arts degree from Saint Petersburg College. While in high school, I earned Adobe Certified Associate certifications in both Adobe Photoshop and Adobe Illustrator, and proceeded to take multiple graphic design courses using Adobe programs in college. During my spare time, I worked multiple personal projects creating 3D assets using Blender.
-				</p>
-				<p>
-					My name is Paul Santoro and I currently live in Clearwater Florida. If you wish to contact me, you can by email at santorop16@gmail.com.
-				</p>
-			</article>
+		<section class="project-list">
+			<h1 class="project-title">About Me</h1>
+			<p class="project-description">
+				Ever since I can remember, I&#39;ve enjoyed illustration. In my early teen years, I was introduced to video game development, where I found my passion in both 2D and 3D digital graphics design. Since then, I&#39;ve honed my skills in art and graphics design through practice, education, and the use of various mediums and software.
+			</p>
+			<p class="project-description">
+				I graduated from Clearwater High School and obtained an Associate of Arts degree from Saint Petersburg College. While in high school, I earned Adobe Certified Associate certifications in both Adobe Photoshop and Adobe Illustrator, and proceeded to take multiple graphic design courses using Adobe programs in college. During my spare time, I worked multiple personal projects creating 3D assets using Blender.
+			</p>
+			<p class="project-description">
+				My name is Paul Santoro and I currently live in Clearwater Florida. If you wish to contact me, you can by email at santorop16@gmail.com.
+			</p>
+
+			<!-- Extend the background to fill the page. -->
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
 		</section>
 
 		<!--Page footer-->
