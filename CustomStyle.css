@@ -95,6 +95,7 @@ div.no-padding {
 	border-radius: 0 !important;
 	vertical-align: middle;
 	font-weight: bold;
+	font-size: 16pt;
 }
 
 .btn-header:hover, .btn-header:focus, .btn-header:active, .btn-header.active, .open > .dropdown-toggle.btn-header {
@@ -111,6 +112,7 @@ div.no-padding {
 	border-color: #ff0031; /*set the color you want here*/
 	border-radius: 0 !important;
 	font-weight: bold;
+	font-size: 16pt;
 }
 
 .btn-header-current:hover, .btn-header-current:focus, .btn-header-current:active, .btn-header-current.active, .open > .dropdown-toggle.btn-header-current {
@@ -152,7 +154,7 @@ div.no-padding {
 
 p {
 	text-indent: 2em;
-	font-size: 14pt;
+	font-size: 16pt;
 }
 
 .carousel-control-prev-icon {
@@ -177,6 +179,7 @@ p {
 
 .project-description {
 	color: #ffffff;
+	font-size: 14pt;
 }
 
 .project-images-two-column {
