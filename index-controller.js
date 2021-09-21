@@ -7,6 +7,7 @@ PaulSantoroWebsite.controller("index-controller",
 	$scope.isTwoColumns = false;
 	$scope.isImageCarouselOpen = false;
 	$scope.windowWidth = 0;
+	$scope.carouselOuterClass = "vertical-center-16x9";
 
 	// Initializes the page.
 	function initialize() {
@@ -18,7 +19,7 @@ PaulSantoroWebsite.controller("index-controller",
 				imageAltText: "Stone Arch Unity Asset",
 				imageSource: "Projects/StoneArchUnityAsset/stone_arch_unity_asset_thumbnail.png.gif",
 				description: "This is a simple, 3D, low-poly asset I created to be used in the Unity game engine. I created 4 levels of detail, ranging from 1k triangles to 268 triangles. This project was created using Blender 2.93, Substance Painter 2021, Adobe Photoshop, and Unity.",
-				page: "Projects/stone.html",
+				carouselOuterClass: "vertical-center-16x9",
 				imagesInCarousel: [
 					{
 						source: "Projects/StoneArchUnityAsset/stone_arch_unity_asset_img1.png",
@@ -42,7 +43,7 @@ PaulSantoroWebsite.controller("index-controller",
 				imageAltText: "Cartoon Robot Animation",
 				imageSource: "Projects/CartoonRobotAnimation/cartoon_robot_animation_walking_gif_thumbnail.gif",
 				description: "A fun, stylized rendition of a happy little robot just enjoying itself. I used a \"how to dance\" video as a visual reference to create the dancing animation. The walking animation was inspired by the giant grin I made for the robot. I created this project using Blender 2.92, and the videos were rendered using Blender's Eevee render engine.",
-				page: "Projects/robot.html",
+				carouselOuterClass: "vertical-center-16x9",
 				imagesInCarousel: [
 					{
 						source: "Projects/CartoonRobotAnimation/DancingAnimation.mp4",
@@ -61,7 +62,7 @@ PaulSantoroWebsite.controller("index-controller",
 				imageAltText: "Stylized Forge Render",
 				imageSource: "Projects/StylizedForgeRender/stylized_forge_thumbnail.png",
 				description: "Inspired by all the fantasy/medieval games I've played in the past, I decided to build my own rendition of a blacksmith's forge. I used photos of old historic blacksmith forges as references when creating this project. To improve render times, I optimized the models of the stones and the coal. I created the forge using Blender 2.93 and Substance Painter 2021, and the images were rendered using Blender's Cycles render engine.",
-				page: "Projects/arch.html",
+				carouselOuterClass: "vertical-center-16x9",
 				imagesInCarousel: [
 					{
 						source: "Projects/StylizedForgeRender/stylized_forge_img1.png",
@@ -71,6 +72,78 @@ PaulSantoroWebsite.controller("index-controller",
 					{
 						source: "Projects/StylizedForgeRender/stylized_forge_img2.png",
 						altText: "Stylized Forge Image 2",
+						isVideo: false
+					}
+				]
+			},
+			{
+				title: "Stylized Stone Floor",
+				imageAltText: "Stylized Stone Floor",
+				imageSource: "Projects/StylizedStoneFloorTexture/stylized_stone_floor_thumbnail.png",
+				description: "Created using Blender, Substance 3D Painter, and Photoshop.",
+				carouselOuterClass: "vertical-center-1x1",
+				imagesInCarousel: [
+					{
+						source: "Projects/StylizedStoneFloorTexture/stylized_stone_floor_sphere.png",
+						altText: "Stylized Stone Floor Image 1",
+						isVideo: false
+					},
+					{
+						source: "Projects/StylizedStoneFloorTexture/stylized_stone_floor_flat.png",
+						altText: "Stylized Stone Floor Image 2",
+						isVideo: false
+					},
+					{
+						source: "Projects/StylizedStoneFloorTexture/stylized_stone_floor_material.png",
+						altText: "Stylized Stone Floor Image 3",
+						isVideo: false
+					}
+				]
+			},
+			{
+				title: "Stylized Stone Wall",
+				imageAltText: "Stylized Stone Wall",
+				imageSource: "Projects/StylizedStoneWallTexture/stylized_stone_wall_thumbnail.png",
+				description: "Created using Blender, Substance 3D Painter, and Photoshop.",
+				carouselOuterClass: "vertical-center-1x1",
+				imagesInCarousel: [
+					{
+						source: "Projects/StylizedStoneWallTexture/stylized_stone_wall_sphere.png",
+						altText: "Stylized Stone Wall Image 1",
+						isVideo: false
+					},
+					{
+						source: "Projects/StylizedStoneWallTexture/stylized_stone_wall_flat.png",
+						altText: "Stylized Stone Wall Image 2",
+						isVideo: false
+					},
+					{
+						source: "Projects/StylizedStoneWallTexture/stylized_stone_wall_material.png",
+						altText: "Stylized Stone Wall Image 3",
+						isVideo: false
+					}
+				]
+			},
+			{
+				title: "Sci Fi Panel",
+				imageAltText: "Sci Fi Panel",
+				imageSource: "Projects/SciFiPanelTexture/scifi_panel_thumbnail.png",
+				description: "Created using Blender, Substance 3D Painter, and Photoshop.",
+				carouselOuterClass: "vertical-center-1x1",
+				imagesInCarousel: [
+					{
+						source: "Projects/SciFiPanelTexture/scifi_panel_sphere.png",
+						altText: "Sci Fi Panel Image 1",
+						isVideo: false
+					},
+					{
+						source: "Projects/SciFiPanelTexture/scifi_panel_flat.png",
+						altText: "Sci Fi Panel Image 2",
+						isVideo: false
+					},
+					{
+						source: "Projects/SciFiPanelTexture/scifi_panel_material.png",
+						altText: "Sci Fi Panel Image 3",
 						isVideo: false
 					}
 				]
@@ -89,7 +162,7 @@ PaulSantoroWebsite.controller("index-controller",
 		$scope.projects.reverse();
 		
 		// Threshold for project column reorganization.
-		$scope.oneColumnMaxWidth = 940;
+		$scope.oneColumnMaxWidth = 1080;
 		
 		$scope.onWindowResize();
 	}
@@ -159,6 +232,7 @@ PaulSantoroWebsite.controller("index-controller",
 			});
 		}
 
+		$scope.carouselOuterClass = project.carouselOuterClass;
 		$scope.isImageCarouselOpen = true;
 	};
 

@@ -38,36 +38,10 @@ PaulSantoroWebsite.controller("experience-controller",
 								source: "Experience/3DModelingImgs/3dmodeling_img5.png",
 								altText: "3D Modeling Image 5",
 								isVideo: false
-							}
-						]
-					},
-					{
-						title: "Illustration",
-						description: "I currently use Wacom drawing tablets to create illustrations in both Adobe Photoshop and Adobe Illustrator. I've created multiple illustrations including character designs, environment designs, wallpapers, references for 3D assets and more.",
-						imagesInCarousel: [
-							{
-								source: "Experience/IllustrationImgs/illustration_img1.png",
-								altText: "Illustration Image 1",
-								isVideo: false
 							},
 							{
-								source: "Experience/IllustrationImgs/illustration_img2.png",
-								altText: "Illustration Image 2",
-								isVideo: false
-							},
-							{
-								source: "Experience/IllustrationImgs/illustration_img3.png",
-								altText: "Illustration Image 3",
-								isVideo: false
-							},
-							{
-								source: "Experience/IllustrationImgs/illustration_img4.png",
-								altText: "Illustration Image 4",
-								isVideo: false
-							},
-							{
-								source: "Experience/IllustrationImgs/illustration_img5.png",
-								altText: "Illustration Image 5",
+								source: "Experience/3DModelingImgs/3dmodeling_img6.png",
+								altText: "3D Modeling Image 6",
 								isVideo: false
 							}
 						]
@@ -102,8 +76,39 @@ PaulSantoroWebsite.controller("experience-controller",
 								isVideo: false
 							},
 							{
-								source: "Experience/MaterialCreationImgs/materialcreationimg6.png",
+								source: "Experience/MaterialCreationImgs/materialcreation_img6.png",
 								altText: "Material Creation Image 6",
+								isVideo: false
+							}
+						]
+					},
+					{
+						title: "Illustration",
+						description: "I currently use Wacom drawing tablets to create illustrations in both Adobe Photoshop and Adobe Illustrator. I've created multiple illustrations including character designs, environment designs, wallpapers, references for 3D assets and more.",
+						imagesInCarousel: [
+							{
+								source: "Experience/IllustrationImgs/illustration_img1.png",
+								altText: "Illustration Image 1",
+								isVideo: false
+							},
+							{
+								source: "Experience/IllustrationImgs/illustration_img2.png",
+								altText: "Illustration Image 2",
+								isVideo: false
+							},
+							{
+								source: "Experience/IllustrationImgs/illustration_img3.png",
+								altText: "Illustration Image 3",
+								isVideo: false
+							},
+							{
+								source: "Experience/IllustrationImgs/illustration_img4.png",
+								altText: "Illustration Image 4",
+								isVideo: false
+							},
+							{
+								source: "Experience/IllustrationImgs/illustration_img5.png",
+								altText: "Illustration Image 5",
 								isVideo: false
 							}
 						]

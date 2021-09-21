@@ -214,13 +214,22 @@ p {
 	/* cursor: pointer; Add a pointer on hover */
 }
 
-.vertical-center {
+.vertical-center-16x9 {
 	margin: 0 auto;
 	position: absolute;
 	top: 50%;
 	-ms-transform: translateY(-50%) translateX(8%);
 	transform: translateY(-50%) translateX(8%);
 	max-width: 84%;
+}
+
+.vertical-center-1x1 {
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%) translateX(52.75%);
+	transform: translateY(-50%) translateX(52.75%);
+	max-width: 47.25%;
 }
 
 footer {

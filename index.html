@@ -27,7 +27,7 @@
 
 		<!-- Project Image Carousel Overlay -->
 		<div class="project-overlay" ng-if="isImageCarouselOpen">
-			<div class="vertical-center" style="background-color: #000000">
+			<div ng-class="carouselOuterClass" style="background-color: #000000">
 				<div id="carouselProjectImages" class="carousel slide" data-interval="false">
 					<ol class="carousel-indicators">
 						<li ng-repeat="image in projectImageView" data-target="#carouselProjectImages" data-slide-to="{{image.index}}" ng-class="image.carouselIndicatorClass"></li>
